@@ -1,9 +1,29 @@
-// select all img tags on the page
-// convert the results from a nodelist to an array
-const imgTags = Array.prototype.slice.call(document.querySelectorAll('img'))
-console.log('imgTags', imgTags)
+// check if all images are loaded before parsing colors
+// https://stackoverflow.com/a/11071687/1732222
+const imgs = document.images
+const len = imgs.length
+let counter = 0
 
-imgTags.forEach(imgTag => drawColorBoxes(imgTag))
+Array.prototype.forEach.call(imgs, function(img) {
+  img.addEventListener('load', incrementCounter, false)
+})
+
+function incrementCounter() {
+  counter++
+  if (counter === len) {
+    console.log('All images loaded!')
+    parseImages()
+  }
+}
+
+function parseImages() {
+  // select all img tags on the page
+  // convert the results from a nodelist to an array
+  const imgTags = Array.prototype.slice.call(document.querySelectorAll('img'))
+  console.log('imgTags', imgTags)
+
+  imgTags.forEach(imgTag => drawColorBoxes(imgTag))
+}
 
 function drawColorBoxes(imgEl) {
   const rgb = getAverageRGB(imgEl)

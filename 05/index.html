@@ -4,18 +4,35 @@
     <title>average color demo</title>
     <style>
       div {
+        margin-left: 4px;
+        margin-bottom: 4px;
+      }
+      #colorDiv {
         height: 100px;
         width: 100px;
-        display: inline-block;
+      }
+      #grayScaleDiv {
+        height: 100px;
+        width: 100px;
       }
     </style>
   </head>
   <body>
     Setting the BODY's background to the average color in the following image:
     <br/><br/>
-    <img id="i" class="one" src="jungle-roots.png"/>
-    <div id="colorDiv" class="one"></div>
-    <div id="grayScaleDiv" class="one"></div> 
+
+    <div style="display: flex; flex-direction: row">
+      <img id="i" class="one" src="jungle-roots.png"/>
+      <div id="colorDiv" class="one"></div>
+      <div id="grayScaleDiv" class="one"></div>
+    </div>
+
+    <div style="display: flex; flex-direction: row">
+      <img id="i" class="two" src="vladi-private-island.jpeg"/>
+      <div id="colorDiv" class="two"></div>
+      <div id="grayScaleDiv" class="two"></div> 
+    </div>
+
     <script src=parse-color.js></script>
   </body>
 </html>
