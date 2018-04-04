@@ -1,0 +1,10 @@
+{
+  "name": "parse-image-color",
+  "version": "1.0.0",
+  "description": "some tools for parsing dominant colors out of an image",
+  "main": "index.js",
+  "repository": "git@github.com:micahstubbs/parse-image-color.git",
+  "author": "Micah Stubbs <micah.stubbs@gmail.com>",
+  "license": "Apache-2.0",
+  "private": false
+}
