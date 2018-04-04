@@ -2,13 +2,17 @@ const rgb = getAverageRGB(document.getElementById('i'))
 const grayRGB = getGrayscaleColor(rgb)
 
 // set the color of the first box to the average color of the image
-document.querySelector('#colorDiv').style.backgroundColor = `rgb(${rgb.r},${rgb.g},${rgb.b})`
+document.querySelector('#colorDiv').style.backgroundColor = `rgb(${rgb.r},${
+  rgb.g
+},${rgb.b})`
 
 // set the color of the second box to the grayscale value of that average image color
-const grayRGBString = `rgb(${grayRGB.r},${grayRGB.g},${grayRGB.b})`;
+const grayRGBString = `rgb(${grayRGB.r},${grayRGB.g},${grayRGB.b})`
 console.log('grayRGBString', grayRGBString)
 const grayScaleDiv = document.querySelector('#grayScaleDiv')
-grayScaleDiv.style.backgroundColor = `rgb(${grayRGB.r},${grayRGB.g},${grayRGB.b})`
+grayScaleDiv.style.backgroundColor = `rgb(${grayRGB.r},${grayRGB.g},${
+  grayRGB.b
+})`
 
 //
 // function defs
@@ -71,6 +75,8 @@ function getAverageRGB(imgEl) {
 }
 
 function getGrayscaleColor(rgb) {
+  // the original ITU-R recommendation (BT.709, specifically) which is the historical precedent.  
+  // This formula, sometimes called Luma, looks like this:
   const grayValue = Math.round(rgb.r * 0.2126 + rgb.g * 0.7152 + rgb.b * 0.0722)
   const grayRGB = {
     r: grayValue,
