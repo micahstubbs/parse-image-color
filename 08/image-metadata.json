@@ -1,0 +1,54 @@
+{
+    "snowy-field.png": {
+        "averageColor": {
+            "r": 203,
+            "g": 206,
+            "b": 217
+        },
+        "averageColorGrayScale": {
+            "r": 206,
+            "g": 206,
+            "b": 206
+        },
+        "imageFile": "snowy-field.png"
+    },
+    "tropical-island.png": {
+        "averageColor": {
+            "r": 75,
+            "g": 129,
+            "b": 127
+        },
+        "averageColorGrayScale": {
+            "r": 117,
+            "g": 117,
+            "b": 117
+        },
+        "imageFile": "tropical-island.png"
+    },
+    "forest-fire.png": {
+        "averageColor": {
+            "r": 150,
+            "g": 86,
+            "b": 6
+        },
+        "averageColorGrayScale": {
+            "r": 94,
+            "g": 94,
+            "b": 94
+        },
+        "imageFile": "forest-fire.png"
+    },
+    "jungle-roots.png": {
+        "averageColor": {
+            "r": 49,
+            "g": 60,
+            "b": 26
+        },
+        "averageColorGrayScale": {
+            "r": 55,
+            "g": 55,
+            "b": 55
+        },
+        "imageFile": "jungle-roots.png"
+    }
+}
